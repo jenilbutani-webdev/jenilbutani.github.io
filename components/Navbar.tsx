@@ -96,12 +96,12 @@ const Navbar = () => {
       <motion.nav
         animate={{
           backgroundColor: isDark
-            ? scrolled ? "rgba(10,10,10,0.95)" : "rgba(10,10,10,1)"
-            : scrolled ? "rgba(242,237,230,0.95)" : "rgba(242,237,230,1)",
+            ? scrolled ? "rgba(10,10,10,0.65)" : "rgba(10,10,10,0.75)"
+            : scrolled ? "rgba(242,237,230,0.65)" : "rgba(242,237,230,0.75)",
           borderColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
         }}
         transition={{ duration: 0.25 }}
-        className="fixed top-0 z-50 w-full border-b backdrop-blur-md border-[hsl(var(--hairline))]"
+        className="fixed top-0 z-50 w-full border-b backdrop-blur-xl border-[hsl(var(--hairline))]"
       >
         <div className="mx-auto flex max-w-7xl items-center px-8 py-3.5">
 
@@ -132,7 +132,7 @@ const Navbar = () => {
               // Light mode me text-neutral-600 aur hover:text-black
               // Dark mode me text-neutral-400 aur hover:text-white
               const baseClasses = isDark
-                ? "text-neutral-400 hover:text-white"
+                ? "text-neutral-200 hover:text-white"
                 : "text-neutral-700 hover:text-black";
 
               return (link as any).type === "scroll" ? (

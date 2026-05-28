@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="px-6 py-24"
+      className="px-6 py-20"
       style={{ borderBottom: "1px solid var(--border)" }}
     >
       <motion.div
@@ -234,6 +234,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.01 }}
                 type="submit"
                 disabled={loading}
+                suppressHydrationWarning
                 className="send-btn mt-8 inline-flex w-full items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-70 rounded-full"
                 style={{
                   background: "var(--text)",

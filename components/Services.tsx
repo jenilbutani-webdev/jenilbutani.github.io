@@ -49,7 +49,7 @@ const Service = () => {
   return (
     <section
       id="service"
-      className="px-6 py-16"
+      className="px-6 py-20"
     // style={{ borderBottom: "1px solid var(--border)" }}
     >
       <motion.div

@@ -93,7 +93,7 @@ const Hero = () => {
             className="mt-8 max-w-sm text-sm leading-relaxed"
             style={{ color: "var(--muted)" }}
           >
-            I build full-stack web products with React, Node.js, and MongoDB — focused on clean
+            I build full-stack web products with React, Node.js, Next.js and MongoDB — focused on clean
             architecture and real-world performance.
           </p>
 

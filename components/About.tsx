@@ -154,7 +154,7 @@ function About() {
             </div>
           </motion.div>
 
-          {/* Right: info card (Jinish ke premium layout jaisa same structural design) */}
+          {/* Right: info card */}
           <motion.div
             variants={item}
             className="info-card p-8"
@@ -184,7 +184,7 @@ function About() {
               ))}
             </div>
 
-            {/* SECTION 2: REACHABLE (Bina labels ke, clear list layout border ke sath) */}
+            {/* SECTION 2: REACHABLE */}
             <p className="mt-10 mb-6 font-mono text-[11px] uppercase tracking-widest text-neutral-500">
               Reachable
             </p>
@@ -210,33 +210,41 @@ function About() {
           </motion.div>
         </div>
 
-        {/* Operating Principles — row list */}
-        <motion.div variants={item} className="mt-24">
-          <p className="mb-12 font-mono text-xs uppercase tracking-widest" style={{ color: "var(--text)" }}>
-            Operating Principles
-          </p>
+        {/* === Operating Principles — numbered editorial list === */}
+        <motion.div variants={item} className="grid lg:grid-cols-12 gap-8 lg:gap-16 mt-24">
+          {/* Left Side: Sticky Title */}
+          <div className="lg:col-span-3">
+            <div className="label sticky top-28 font-mono text-xs uppercase tracking-widest text-[hsl(var(--ink-3))]">
+              Operating Principles
+            </div>
+          </div>
 
-          <div>
+          {/* Right Side: Principles List */}
+          <div className="lg:col-span-9 space-y-0">
             {principles.map((p, i) => (
               <motion.div
                 key={p.number}
                 variants={item}
-                className="grid grid-cols-1 gap-6 py-10 md:grid-cols-[60px_1fr_1fr]"
-                style={{
-                  borderTop: i === 0 ? "1px solid var(--border)" : "1px solid var(--border)",
-                  borderBottom: i === principles.length - 1 ? "1px solid var(--border)" : "none",
-                }}
+                className={`grid grid-cols-[40px_1fr] gap-6 md:gap-8 py-10 ${i === 0 ? "border-t" : ""
+                  } border-b border-gray-300`}
               >
-                <span className="font-mono text-xs" style={{ color: "var(--text)" }}>{p.number}</span>
-                <h3
-                  className="font-heading font-bold leading-tight"
-                  style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", color: "var(--text)" }}
-                >
-                  {p.title}
-                </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-                  {p.description}
-                </p>
+                {/* Number */}
+                <div className="label mono tnum text-[hsl(var(--ink-3))] pt-1 text-xs">
+                  {p.number}
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3
+                    className="font-heading font-bold leading-tight mb-3 text-balance text-[hsl(var(--ink))]"
+                    style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}
+                  >
+                    {p.title}
+                  </h3>
+                  <p className="text-[hsl(var(--ink-2))] text-[16px] leading-relaxed max-w-2xl">
+                    {p.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
