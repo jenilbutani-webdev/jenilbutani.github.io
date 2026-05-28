@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "export": "next build",
+    "deploy": "next build && touch out/.nojekyll"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
