@@ -26,7 +26,7 @@ const rows = [
   ["Role", "MERN Stack Developer"],
   ["Stack", "React · Node.js · MongoDB · Express"],
   ["Focus", "Full-Stack · React.js · Web Apps"],
-  ["Based in", "Ahmedabad, India · GMT+5:30"],
+  ["Based in", "Surat, India · GMT+5:30"],
 ];
 
 const reachable = [
